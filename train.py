@@ -106,7 +106,7 @@ def run(rank, n_gpus, hps):
         eval_dataset = TextAudioLoaderWithDuration(hps.data.validation_files, hps.data)
         eval_loader = DataLoader(
             eval_dataset,
-            num_workers=8,
+            num_workers=2,
             shuffle=False,
             batch_size=hps.train.batch_size,
             pin_memory=False,
