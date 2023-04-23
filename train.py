@@ -96,7 +96,7 @@ def run(rank, n_gpus, hps):
     collate_fn = TextAudioCollateWithDuration()
     train_loader = DataLoader(
         train_dataset,
-        num_workers=8,
+        num_workers=2,
         shuffle=False,
         pin_memory=False,
         collate_fn=collate_fn,
